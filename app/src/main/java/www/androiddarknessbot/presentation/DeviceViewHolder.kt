@@ -1,8 +1,7 @@
 package www.androiddarknessbot.presentation
 
-import android.view.View
 import androidx.recyclerview.widget.RecyclerView
+import www.androiddarknessbot.databinding.ItemDeviceBinding
 
-class DeviceViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
-}
+class DeviceViewHolder(val binding: ItemDeviceBinding) :
+    RecyclerView.ViewHolder(binding.root) {}

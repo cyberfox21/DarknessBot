@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">DarknessBotAndroid</string>
+    <string name="connection_state">Connection state</string>
+    <string name="Connect">Подключить</string>
+    <string name="count_of_connections_example">28 подключений</string>
+    <string name="unnamed">Unnamed</string>
 </resources>

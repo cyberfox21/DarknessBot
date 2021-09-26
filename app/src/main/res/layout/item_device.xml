@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorWhite"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="6dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
+
+        <ImageView
+            android:id="@+id/iv_device"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="4dp"
+            android:contentDescription="@string/connection_state" />
+
+        <TextView
+            android:id="@+id/tv_device_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/iv_device"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="NBDJEOHRI0938N2" />
+
+        <TextView
+            android:id="@+id/tv_device_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_device_title"
+            android:layout_toEndOf="@id/iv_device"
+            android:text="@string/count_of_connections_example"
+            android:textColor="#a2a2a2"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck" />
+
+        <Button
+            android:id="@+id/btn_connect_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="0dp"
+            android:backgroundTint="@color/colorCerulean"
+            android:padding="10dp"
+            android:text="@string/Connect"
+            android:textColor="@color/colorWhite"
+            app:cardCornerRadius="6dp"
+            tools:ignore="RelativeOverlap,TextContrastCheck" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
