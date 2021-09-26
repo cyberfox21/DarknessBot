@@ -1,12 +1,12 @@
 package www.androiddarknessbot.domain
 
-import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.LiveData
 
 interface DeviceListRepositoty {
 
-    fun getBluetoothDeviceList() : MutableLiveData<List<BotBluetoothDevice>>
+    fun getBluetoothDeviceList(): LiveData<List<BotBluetoothDevice>>
 
-    fun getDevice(id : Int) : BotBluetoothDevice
+    fun getDevice(id: Int): BotBluetoothDevice
 
     fun addDevice(device: BotBluetoothDevice)
 
