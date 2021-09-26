@@ -1,4 +1,4 @@
-package www.androiddarknessbot.domain
+package www.androiddarknessbot.domain.entity
 
 import android.bluetooth.BluetoothDevice
 import android.os.Parcelable

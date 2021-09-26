@@ -2,8 +2,8 @@ package www.androiddarknessbot.data
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import www.androiddarknessbot.domain.BotBluetoothDevice
-import www.androiddarknessbot.domain.DeviceListRepositoty
+import www.androiddarknessbot.domain.entity.BotBluetoothDevice
+import www.androiddarknessbot.domain.repository.DeviceListRepositoty
 
 class DeviceListRepositoryImpl : DeviceListRepositoty {
 

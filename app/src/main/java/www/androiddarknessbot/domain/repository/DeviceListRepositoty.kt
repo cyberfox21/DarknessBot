@@ -1,6 +1,7 @@
-package www.androiddarknessbot.domain
+package www.androiddarknessbot.domain.repository
 
 import androidx.lifecycle.LiveData
+import www.androiddarknessbot.domain.entity.BotBluetoothDevice
 
 interface DeviceListRepositoty {
 
