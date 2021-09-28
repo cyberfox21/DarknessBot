@@ -5,7 +5,7 @@ import www.androiddarknessbot.domain.entity.BotBluetoothDevice
 
 interface DeviceListRepositoty {
 
-    fun getBluetoothDeviceList(): LiveData<List<BotBluetoothDevice>>
+    fun getDeviceList(): LiveData<List<BotBluetoothDevice>>
 
     fun getDevice(id: Int): BotBluetoothDevice
 

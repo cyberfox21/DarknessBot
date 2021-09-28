@@ -17,7 +17,7 @@ class DeviceListRepositoryImpl : DeviceListRepositoty {
             (o1.id).compareTo(o2.id)
         })
 
-    override fun getBluetoothDeviceList(): LiveData<List<BotBluetoothDevice>> {
+    override fun getDeviceList(): LiveData<List<BotBluetoothDevice>> {
         return deviceListLD
     }
 
