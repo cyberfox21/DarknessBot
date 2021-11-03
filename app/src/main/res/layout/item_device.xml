@@ -21,6 +21,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:padding="4dp"
+            tools:src="@drawable/bluetooth_high"
             android:contentDescription="@string/connection_state" />
 
         <TextView

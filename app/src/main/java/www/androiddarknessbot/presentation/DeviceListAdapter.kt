@@ -10,7 +10,7 @@ import www.androiddarknessbot.domain.entity.BotBluetoothDevice
 class DeviceListAdapter : ListAdapter<BotBluetoothDevice, DeviceViewHolder>(DeviceDiffCallback()) {
 
     interface OnBtnConnectClickListener{
-        fun onBtnClick()
+        fun onBtnConnectClick()
     }
 
     val onBtnConnectClickListener: OnBtnConnectClickListener? = null
@@ -31,7 +31,7 @@ class DeviceListAdapter : ListAdapter<BotBluetoothDevice, DeviceViewHolder>(Devi
             tvDeviceTitle.text = item.device.name ?: root.context.getString(R.string.unnamed)
 //            tvDeviceDescription.text = ...
             btnConnectDevice.setOnClickListener {
-                onBtnConnectClickListener?.onBtnClick()
+                onBtnConnectClickListener?.onBtnConnectClick()
             }
         }
     }
