@@ -1,91 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".presentation.MainActivity">
+    android:layout_height="match_parent">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appbar_layout"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:contentDescription="@string/tap_to_search_devices"
-        android:theme="@style/CollapsingToolbar">
-
-        <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:id="@+id/collapsing_toolbar_layout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorDarkSkyBlue"
-            app:collapsedTitleTextAppearance="@style/CollapsingToolbar"
-            app:contentScrim="?attr/colorPrimary"
-            app:expandedTitleGravity="center_horizontal|bottom"
-            app:expandedTitleTextAppearance="@style/ExpandedToolbar"
-            app:layout_anchor="@+id/appbar_layout"
-            app:layout_anchorGravity="center"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            app:title="@string/tap_to_search_devices"
-            app:titleCollapseMode="scale">
-
-            <ImageButton
-                android:id="@+id/ibtn_start_scan"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="48dp"
-                android:layout_marginBottom="64dp"
-                android:background="@drawable/button_states"
-                android:fitsSystemWindows="true"
-                android:src="@drawable/ic_bluetooth"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:contentDescription="@string/start_scan_button" />
-
-            <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/lv_animation"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="48dp"
-                android:layout_marginBottom="64dp"
-                app:lottie_autoPlay="false"
-                app:lottie_loop="true"
-                app:lottie_rawRes="@raw/btn_scan_animation" />
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:collapseContentDescription="@string/app_name"
-                app:layout_collapseMode="pin"
-                app:titleTextColor="@color/colorWhite" />
-
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
-
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/search_recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="8dp"
-        android:visibility="invisible"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:listitem="@layout/item_device" />
-
-    <include
-        android:id="@+id/empty_layout"
-        layout="@layout/layout_empty"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:visibility="visible"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="@dimen/elevation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/scan_toolbar_menu"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/colorWhite" />
 
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:context=".core.MainActivity">
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:contentDescription="@string/tap_to_search_devices"
+            android:theme="@style/CollapsingToolbar">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorDarkSkyBlue"
+                app:collapsedTitleTextAppearance="@style/CollapsingToolbar"
+                app:contentScrim="?attr/colorPrimary"
+                app:expandedTitleGravity="center_horizontal|bottom"
+                app:expandedTitleTextAppearance="@style/ExpandedToolbar"
+                app:layout_anchor="@+id/appbar_layout"
+                app:layout_anchorGravity="center"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:title="@string/tap_to_search_devices"
+                app:titleCollapseMode="fade">
+
+                <ImageButton
+                    android:id="@+id/ibtn_start_scan"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="48dp"
+                    android:layout_marginBottom="64dp"
+                    android:background="@drawable/button_states"
+                    android:contentDescription="@string/start_scan_button"
+                    android:fitsSystemWindows="true"
+                    android:src="@drawable/ic_bluetooth"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lv_animation"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="48dp"
+                    android:layout_marginBottom="64dp"
+                    app:lottie_autoPlay="false"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/btn_scan_animation" />
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/search_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:visibility="invisible"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:listitem="@layout/item_device" />
+
+        <include
+            android:id="@+id/empty_layout"
+            layout="@layout/layout_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:visibility="visible"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

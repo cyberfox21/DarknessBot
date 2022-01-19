@@ -26,7 +26,7 @@
         android:theme="@style/Theme.DarknessBotAndroid"
         tools:ignore="AllowBackup">
         <activity
-            android:name=".presentation.MainActivity"
+            android:name=".core.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
