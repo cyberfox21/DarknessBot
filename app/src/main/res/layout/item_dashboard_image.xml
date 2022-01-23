@@ -6,6 +6,7 @@
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:layout_margin="@dimen/dashboard_card_margin"
+    android:background="@color/colorWhite"
     card_view:cardCornerRadius="8dp"
     card_view:cardElevation="12dp">
 
@@ -31,7 +32,7 @@
             android:layout_height="match_parent"
             android:layout_below="@id/tv_image_description"
             android:layout_marginTop="8dp"
-            android:scaleType="fitCenter"
-            android:contentDescription="@string/functional_button_with_image" />
+            android:contentDescription="@string/functional_button_with_image"
+            android:scaleType="fitCenter" />
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

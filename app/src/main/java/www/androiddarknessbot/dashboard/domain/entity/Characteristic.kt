@@ -4,7 +4,7 @@ import www.androiddarknessbot.dashboard.domain.CharacteristicType
 
 data class Characteristic(
     val title: String,
-    val value: Int,
+    var value: Int,
     val maxValue: Int,
     val dimension: String,
     val type: CharacteristicType

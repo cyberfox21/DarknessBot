@@ -92,6 +92,9 @@ class DashboardFragment : Fragment() {
 
         viewModel.characteristicList.observe(viewLifecycleOwner) { rvAdapter.submitList(it) }
 
+        binding.rvDashboard.itemAnimator?.addDuration = 0
+        binding.rvDashboard.itemAnimator?.changeDuration = 0
+
         binding.rvDashboard.adapter = rvAdapter
         binding.rvDashboard.layoutManager = GridLayoutManager(
             activity?.applicationContext,

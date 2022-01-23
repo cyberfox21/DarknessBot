@@ -11,7 +11,7 @@ data class ProgressItem(
     val dimension: String
 ) : DelegateItem {
 
-    override fun id() = id
+    override fun id() = title
 
     override fun content() = value
 }

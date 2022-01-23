@@ -14,34 +14,40 @@ class CharacteristicMapper {
         characteristics.map { mapToDelegateItem(it) }
 
     private fun mapToDelegateItem(characteristic: Characteristic): DelegateItem {
-        val type = when (characteristic.type) {
-            CharacteristicType.Speed,
-            CharacteristicType.SingleMaxSpeed,
-            CharacteristicType.Temperature,
-            CharacteristicType.Battery -> DashboardItemType.PROGRESS
-//        CharacteristicType.avgSpeed -> TODO()
-//        CharacteristicType.totalRuntime -> TODO()
-//        CharacteristicType.singleRuntime -> TODO()
-            CharacteristicType.TotalMileage,
-            CharacteristicType.SingleMileage -> DashboardItemType.TEXT
+        val type =
+            when (characteristic.type) {
 
-//        CharacteristicType.remainingMileage -> TODO()
-//        CharacteristicType.power -> TODO()
-//        CharacteristicType.current -> TODO()
-//        CharacteristicType.voltage -> TODO()
-//        CharacteristicType.pitch -> TODO()
-//        CharacteristicType.roll -> TODO()
-//        CharacteristicType.energy -> TODO()
-            CharacteristicType.Compass -> DashboardItemType.IMAGE
-            CharacteristicType.Weather -> DashboardItemType.IMAGE
-            CharacteristicType.Beep -> DashboardItemType.IMAGE
-            CharacteristicType.Torch -> DashboardItemType.IMAGE
-//        CharacteristicType.strobe -> TODO()
-            CharacteristicType.Lights -> DashboardItemType.IMAGE
-            CharacteristicType.Lock -> DashboardItemType.IMAGE
-            CharacteristicType.TurnOff -> DashboardItemType.IMAGE
-//        CharacteristicType.unknown -> TODO()
-        }
+                CharacteristicType.Speed,
+                CharacteristicType.SingleMaxSpeed,
+                CharacteristicType.AvgSpeed,
+                CharacteristicType.Temperature,
+                CharacteristicType.Battery,
+                CharacteristicType.Power,
+                CharacteristicType.Current,
+                CharacteristicType.Voltage -> DashboardItemType.PROGRESS
+
+                CharacteristicType.TotalRuntime,
+                CharacteristicType.SingleRuntime,
+                CharacteristicType.RemainingMileage,
+                CharacteristicType.TotalMileage,
+                CharacteristicType.SingleMileage -> DashboardItemType.TEXT
+
+                CharacteristicType.Pitch,
+                CharacteristicType.Roll,
+                CharacteristicType.Energy,
+                CharacteristicType.Compass,
+                CharacteristicType.Weather,
+                CharacteristicType.Beep,
+                CharacteristicType.Torch,
+                CharacteristicType.Strobe,
+                CharacteristicType.Lights,
+                CharacteristicType.Lock,
+                CharacteristicType.TurnOff -> DashboardItemType.IMAGE
+
+                CharacteristicType.Unknown ->
+                    throw RuntimeException("Unknown characteristic type ${characteristic.type}")
+            }
+
         return when (type) {
             DashboardItemType.PROGRESS -> createProgressItem(characteristic)
             DashboardItemType.IMAGE -> createImageItem(characteristic)
@@ -52,8 +58,6 @@ class CharacteristicMapper {
     private fun createProgressItem(characteristic: Characteristic) = ProgressItem(
         id = 0,
         title = characteristic.title,
-        //progress = characteristic.value,
-        //progress = getProgress(characteristic.value, characteristic.maxValue),
         max = characteristic.maxValue,
         value = characteristic.value,
         dimension = characteristic.dimension
@@ -73,17 +77,6 @@ class CharacteristicMapper {
     )
 
     private fun getCharacteristicImageByType(type: CharacteristicType): Int = when (type) {
-        CharacteristicType.Lights -> R.drawable.bluetooth_low
-        else -> R.drawable.bluetooth_low
+        else -> R.drawable.ic_empty
     }
-
-//    private fun getProgress(value: Int, maxValue: Int): Int {
-//        val fraction = (value.toDouble() / maxValue)
-//        val result = (fraction * PERCENT).toInt()
-//        return result
-//    }
-//
-//    companion object {
-//        const val PERCENT = 100
-//    }
 }

@@ -1,5 +1,7 @@
 package www.androiddarknessbot.dashboard.data
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import www.androiddarknessbot.dashboard.domain.CharacteristicType
 import www.androiddarknessbot.dashboard.domain.adapter.BaseAdapter
 import www.androiddarknessbot.dashboard.domain.entity.Characteristic
@@ -41,15 +43,20 @@ class TestAdapter : BaseAdapter() {
 //        }
 //    }
 
-    override fun getCharacteristics(): List<Characteristic> = listOf(
-        Characteristic("totalMileage", 1000, 2000, "km", CharacteristicType.TotalMileage),
-        Characteristic("battery", 15, 100, "%", CharacteristicType.Battery),
-        Characteristic("speed", 70, 100, "km/h", CharacteristicType.Speed),
-        Characteristic("temperature", 43, 60, "'C", CharacteristicType.Temperature),
-        Characteristic("singleMileage", 104, 2000, "km", CharacteristicType.SingleMileage),
-        Characteristic("singleMaxSpeed", 40, 80, "km/h", CharacteristicType.SingleMaxSpeed),
-        Characteristic("totalMileage", 106, 2000, "km", CharacteristicType.TotalMileage),
-        Characteristic("speed", 56, 200, "km/h", CharacteristicType.Speed),
-    )
+    override fun getCharacteristics(): LiveData<List<Characteristic>> {
+
+        val list = listOf(
+            Characteristic("totalMileage", 1000, 2000, "km", CharacteristicType.TotalMileage),
+            Characteristic("battery", 15, 100, "%", CharacteristicType.Battery),
+            Characteristic("speed", 70, 100, "km/h", CharacteristicType.Speed),
+            Characteristic("temperature", 43, 60, "'C", CharacteristicType.Temperature),
+            Characteristic("singleMileage", 104, 2000, "km", CharacteristicType.SingleMileage),
+            Characteristic("singleMaxSpeed", 40, 80, "km/h", CharacteristicType.SingleMaxSpeed),
+            Characteristic("totalMileage", 106, 2000, "km", CharacteristicType.TotalMileage),
+            Characteristic("speed", 56, 200, "km/h", CharacteristicType.Speed),
+        )
+
+        return MutableLiveData<List<Characteristic>>().apply { value = list }
+    }
 
 }

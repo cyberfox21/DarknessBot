@@ -17,6 +17,9 @@
         <item name="android:navigationBarColor" tools:targetApi="l">@color/colorDarkSkyBlue</item>
         <item name="colorControlHighlight">@color/colorWhite</item>
 
+        <item name="actionMenuTextColor">@color/colorWhite</item>
+        <item name="android:actionMenuTextColor">@color/colorWhite</item>
+
     </style>
 
 
@@ -32,5 +35,10 @@
 
     <style name="ItemDevice">
         <item name="android:background">@color/colorWhite</item>
+    </style>
+
+    <style name="ItemDashboard">
+        <item name="android:background">@color/colorWhite</item>
+        // todo change to tint
     </style>
 </resources>

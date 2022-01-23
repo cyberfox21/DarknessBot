@@ -26,7 +26,6 @@ class CustomArcProgressbar @kotlin.jvm.JvmOverloads constructor(
                 value > progressMax -> progressMax
                 else -> value
             }
-            invalidate()
         }
 
     private var _startAngle: Float = DEFAULT_START_ANGLE
@@ -109,9 +108,9 @@ class CustomArcProgressbar @kotlin.jvm.JvmOverloads constructor(
     }
 
     private fun getColorByAngle(arcFinishedAngle: Float): Int = when (arcFinishedAngle) {
-        in 0F..90F -> Color.GREEN
+        in 0F..91F -> Color.GREEN
         in 91F..180F -> Color.YELLOW
-        in 181F..270F -> Color.RED
+        in 180F..270F -> Color.RED
         else -> {
             println("angle $arcFinishedAngle")
             Color.BLACK
