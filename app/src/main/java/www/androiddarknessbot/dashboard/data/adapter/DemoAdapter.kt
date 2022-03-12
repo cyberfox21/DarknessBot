@@ -1,4 +1,4 @@
-package www.androiddarknessbot.dashboard.data
+package www.androiddarknessbot.dashboard.data.adapter
 
 import android.util.Log
 import androidx.lifecycle.LiveData
@@ -77,8 +77,8 @@ class DemoAdapter : BaseAdapter() {
     }
 
     companion object {
-        const val UPDATE_REQUEST_DELAY = 200.toLong()
-        const val UPDATE_REQUEST_PERIOD = 1000.toLong()
+        const val UPDATE_REQUEST_DELAY = 200L
+        const val UPDATE_REQUEST_PERIOD = 1000L
     }
 
 }

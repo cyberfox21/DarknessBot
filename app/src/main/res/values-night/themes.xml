@@ -22,7 +22,6 @@
 
     </style>
 
-
     <style name="ExpandedToolbar" parent="Widget.Design.CollapsingToolbar">
         <item name="android:textSize">14sp</item>
     </style>

@@ -22,7 +22,7 @@ import androidx.transition.TransitionInflater
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.location.*
 import www.androiddarknessbot.R
-import www.androiddarknessbot.core.NavigationHolder
+import www.androiddarknessbot.core.presentation.NavigationHolder
 import www.androiddarknessbot.dashboard.presentation.DashboardFragment
 import www.androiddarknessbot.databinding.FragmentScanBinding
 import www.androiddarknessbot.scan.domain.entity.BotBluetoothDevice
@@ -82,7 +82,8 @@ class ScanFragment : Fragment() {
         if (result.resultCode == Activity.RESULT_OK) {
             log("bluetooth enabled")
             viewModel.startScan()
-        } else { /* denied */ }
+        } else { /* denied */
+        }
     }
 
     override fun onCreateView(

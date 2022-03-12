@@ -1,4 +1,4 @@
-package www.androiddarknessbot.dashboard.data
+package www.androiddarknessbot.dashboard.data.adapter
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

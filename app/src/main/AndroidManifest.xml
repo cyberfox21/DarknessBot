@@ -13,11 +13,14 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
 
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
     <uses-feature
         android:name="android.hardware.bluetooth_le"
         android:required="false" />
 
     <application
+        android:name=".core.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_logo"
         android:label="@string/app_name"
@@ -26,7 +29,7 @@
         android:theme="@style/Theme.DarknessBotAndroid"
         tools:ignore="AllowBackup">
         <activity
-            android:name=".core.MainActivity"
+            android:name=".core.presentation.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,6 +37,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <service android:name=".dashboard.data.BluetoothService" />
     </application>
 
 </manifest>

@@ -1,6 +1,7 @@
 package www.androiddarknessbot.dashboard.presentation
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +12,9 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager.HORIZONTAL
 import androidx.transition.TransitionInflater
 import www.androiddarknessbot.R
+import www.androiddarknessbot.dashboard.data.BluetoothService
+import www.androiddarknessbot.dashboard.data.BluetoothService.Companion.ACTION_START_SERVICE
+import www.androiddarknessbot.dashboard.data.BluetoothService.Companion.ACTION_STOP_SERVICE
 import www.androiddarknessbot.dashboard.presentation.recycler.ScreenMeasurer
 import www.androiddarknessbot.dashboard.presentation.recycler.adapter.ImageDelegateAdapter
 import www.androiddarknessbot.dashboard.presentation.recycler.adapter.ProgressDelegateAdapter
@@ -20,6 +24,8 @@ import www.androiddarknessbot.databinding.FragmentDashboardBinding
 import www.androiddarknessbot.scan.domain.entity.BotBluetoothDevice
 
 class DashboardFragment : Fragment() {
+
+    private var isServiceWorking = false
 
     private var _binding: FragmentDashboardBinding? = null
     private val binding
@@ -52,6 +58,16 @@ class DashboardFragment : Fragment() {
         launchRightMode()
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
+    override fun onDestroy() {
+        if (dashboardMode == DashboardScreenMode.DEVICE && isServiceWorking) stopBluetoothService()
+        super.onDestroy()
+    }
+
     private fun setCustomTransitions() {
         transitionInflater = TransitionInflater.from(requireContext())
         enterTransition = transitionInflater.inflateTransition(R.transition.slide_right)
@@ -77,9 +93,20 @@ class DashboardFragment : Fragment() {
 
     private fun processDeviceMode() {
         /* check if it is EUC */
+        //viewModel.callWheelResolver()
+//        viewModel.shouldCallBluetoothService.observe(this) {
+//            when (it) {
+//                true -> activity?.startService(intentToBluetoothService)
+//                false -> activity?.stopService(intentToBluetoothService)
+//            }
+//        }
+        if (isServiceWorking) stopBluetoothService()
+        startBluetoothService()
+
     }
 
     private fun processDemoMode() {
+        viewModel.characteristicList.observe(viewLifecycleOwner) { rvAdapter.submitList(it) }
         viewModel.callDemoAdapter()
     }
 
@@ -89,8 +116,6 @@ class DashboardFragment : Fragment() {
         rvAdapter.addDelegate(ProgressDelegateAdapter(screenMeasurer))
         rvAdapter.addDelegate(ImageDelegateAdapter(screenMeasurer))
         rvAdapter.addDelegate(TextDelegateAdapter(screenMeasurer))
-
-        viewModel.characteristicList.observe(viewLifecycleOwner) { rvAdapter.submitList(it) }
 
         binding.rvDashboard.itemAnimator?.addDuration = 0
         binding.rvDashboard.itemAnimator?.changeDuration = 0
@@ -103,6 +128,13 @@ class DashboardFragment : Fragment() {
             false
         )
     }
+
+    private fun startBluetoothService() = sendCommandToService(ACTION_START_SERVICE)
+
+    private fun stopBluetoothService() = sendCommandToService(ACTION_STOP_SERVICE)
+
+    private fun sendCommandToService(action: String) =
+        activity?.startService(BluetoothService.newIntent(requireContext(), action))
 
     companion object {
 

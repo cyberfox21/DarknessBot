@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android/AndroidStudioProjects/DarknessBotAndroid/app/src/main/res/drawable-anydpi/ic_settings.xml" value="0.165625" />
         <entry key="..\:/Android/AndroidStudioProjects/DarknessBotAndroid/app/src/main/res/drawable/button_states.xml" value="0.29375" />
         <entry key="..\:/Android/AndroidStudioProjects/DarknessBotAndroid/app/src/main/res/drawable/ic_bluetooth.xml" value="0.29375" />
         <entry key="..\:/Android/AndroidStudioProjects/DarknessBotAndroid/app/src/main/res/drawable/ic_empty.xml" value="0.3177083333333333" />
@@ -12,8 +13,13 @@
         <entry key="..\:/Android/AndroidStudioProjects/DarknessBotAndroid/app/src/main/res/layout/fragment_dashboard.xml" value="0.33" />
         <entry key="..\:/Android/AndroidStudioProjects/DarknessBotAndroid/app/src/main/res/layout/fragment_device_data.xml" value="0.12" />
         <entry key="..\:/Android/AndroidStudioProjects/DarknessBotAndroid/app/src/main/res/layout/fragment_scan.xml" value="0.2857142857142857" />
+        <entry key="..\:/Android/AndroidStudioProjects/DarknessBotAndroid/app/src/main/res/layout/item_dashboard_image.xml" value="0.2989583333333333" />
+        <entry key="..\:/Android/AndroidStudioProjects/DarknessBotAndroid/app/src/main/res/layout/item_dashboard_progress.xml" value="0.1" />
+        <entry key="..\:/Android/AndroidStudioProjects/DarknessBotAndroid/app/src/main/res/layout/item_dashboard_text.xml" value="0.22" />
         <entry key="..\:/Android/AndroidStudioProjects/DarknessBotAndroid/app/src/main/res/layout/item_device.xml" value="0.25" />
         <entry key="..\:/Android/AndroidStudioProjects/DarknessBotAndroid/app/src/main/res/layout/layout_empty.xml" value="0.3015625" />
+        <entry key="..\:/Android/AndroidStudioProjects/DarknessBotAndroid/app/src/main/res/layout/toolbar.xml" value="0.36666666666666664" />
+        <entry key="..\:/Android/AndroidStudioProjects/DarknessBotAndroid/app/src/main/res/menu/scan_toolbar_menu.xml" value="0.36666666666666664" />
         <entry key="..\:/Android/AndroidStudioProjects/DarknessBotAndroid/app/src/main/res/mipmap-anydpi-v26/ic_logo.xml" value="0.24427083333333333" />
         <entry key="..\:/Android/AndroidStudioProjects/DarknessBotAndroid/app/src/main/res/mipmap-anydpi-v26/ic_logo_round.xml" value="0.20364583333333333" />
         <entry key="..\:/Android/SDKAndroid/platforms/android-31/data/res/drawable/resolver_turn_on_work_button_ripple_background.xml" value="0.15625" />

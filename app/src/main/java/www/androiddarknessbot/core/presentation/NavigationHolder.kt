@@ -1,4 +1,4 @@
-package www.androiddarknessbot.core
+package www.androiddarknessbot.core.presentation
 
 import androidx.fragment.app.Fragment
 
