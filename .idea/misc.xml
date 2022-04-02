@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Android/AndroidStudioProjects/DarknessBotAndroid/app/src/main/res/drawable-anydpi/ic_settings.xml" value="0.165625" />
+        <entry key="..\:/Android/AndroidStudioProjects/DarknessBotAndroid/app/src/main/res/drawable-hdpi/rectangle.xml" value="0.2864583333333333" />
+        <entry key="..\:/Android/AndroidStudioProjects/DarknessBotAndroid/app/src/main/res/drawable-hdpi/rectangle_button.xml" value="0.2864583333333333" />
         <entry key="..\:/Android/AndroidStudioProjects/DarknessBotAndroid/app/src/main/res/drawable/button_states.xml" value="0.29375" />
         <entry key="..\:/Android/AndroidStudioProjects/DarknessBotAndroid/app/src/main/res/drawable/ic_bluetooth.xml" value="0.29375" />
         <entry key="..\:/Android/AndroidStudioProjects/DarknessBotAndroid/app/src/main/res/drawable/ic_empty.xml" value="0.3177083333333333" />
@@ -13,6 +15,7 @@
         <entry key="..\:/Android/AndroidStudioProjects/DarknessBotAndroid/app/src/main/res/layout/fragment_dashboard.xml" value="0.33" />
         <entry key="..\:/Android/AndroidStudioProjects/DarknessBotAndroid/app/src/main/res/layout/fragment_device_data.xml" value="0.12" />
         <entry key="..\:/Android/AndroidStudioProjects/DarknessBotAndroid/app/src/main/res/layout/fragment_scan.xml" value="0.2857142857142857" />
+        <entry key="..\:/Android/AndroidStudioProjects/DarknessBotAndroid/app/src/main/res/layout/fragment_settings.xml" value="0.2703125" />
         <entry key="..\:/Android/AndroidStudioProjects/DarknessBotAndroid/app/src/main/res/layout/item_dashboard_image.xml" value="0.2989583333333333" />
         <entry key="..\:/Android/AndroidStudioProjects/DarknessBotAndroid/app/src/main/res/layout/item_dashboard_progress.xml" value="0.1" />
         <entry key="..\:/Android/AndroidStudioProjects/DarknessBotAndroid/app/src/main/res/layout/item_dashboard_text.xml" value="0.22" />

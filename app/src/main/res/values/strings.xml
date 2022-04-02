@@ -14,4 +14,10 @@
     <string name="demo">Demo</string>
     <string name="settings">Settings</string>
     <string name="functional_button_with_image">functional button with image</string>
+
+    //настройки
+
+    <string name="application">Приложение</string>
+    <string name="device">Поиск устройств...</string>
+    <string name="about">О программе</string>
 </resources>
