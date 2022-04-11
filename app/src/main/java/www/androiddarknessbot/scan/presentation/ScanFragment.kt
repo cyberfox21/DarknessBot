@@ -27,6 +27,7 @@ import www.androiddarknessbot.dashboard.presentation.DashboardFragment
 import www.androiddarknessbot.databinding.FragmentScanBinding
 import www.androiddarknessbot.scan.domain.entity.BotBluetoothDevice
 import www.androiddarknessbot.scan.presentation.recycler.DeviceListAdapter
+import www.androiddarknessbot.settings.presentation.SettingsFragment
 
 
 class ScanFragment : Fragment() {
@@ -180,19 +181,11 @@ class ScanFragment : Fragment() {
     private fun isAnimationActive() = binding.lvAnimation.isAnimating
 
     private fun showDashboardInDeviceMode(device: BotBluetoothDevice) =
-        showDashboard(DashboardFragment.newInstanceDevice(device))
+        quit(DashboardFragment.newInstanceDevice(device))
 
-    private fun showDashboardInDemoMode() = showDashboard(DashboardFragment.newInstanceDemo())
+    private fun showDashboardInDemoMode() = quit(DashboardFragment.newInstanceDemo())
 
-    private fun showDashboard(dashboardFragment: Fragment) {
-        viewModel.stopScan()
-        val inflater = TransitionInflater.from(requireContext())
-        exitTransition = inflater.inflateTransition(R.transition.fade)
-        (activity as NavigationHolder).addFragment(dashboardFragment, TAG, DashboardFragment.TAG)
-    }
-
-    private fun showSettings() {
-    }
+    private fun showSettings() = quit(SettingsFragment.newInstance())
 
     private fun checkAllPermissions() {
         var appPerms =
@@ -261,6 +254,19 @@ class ScanFragment : Fragment() {
 
     private fun log(message: String) {
         Log.d("CHECKER", "ScanFragment: $message")
+    }
+
+    private fun quit(fragment: Fragment) {
+        viewModel.stopScan()
+        val inflater = TransitionInflater.from(requireContext())
+        exitTransition = inflater.inflateTransition(R.transition.fade)
+        when (fragment) {
+            is DashboardFragment -> (activity as NavigationHolder)
+                .addFragment(fragment, TAG, DashboardFragment.TAG)
+            is SettingsFragment -> (activity as NavigationHolder)
+                .addFragment(fragment, TAG, SettingsFragment.TAG)
+        }
+
     }
 
     companion object {

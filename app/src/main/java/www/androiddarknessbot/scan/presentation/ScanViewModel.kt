@@ -29,7 +29,7 @@ class ScanViewModel(application: Application) : AndroidViewModel(application) {
         })
 
     private lateinit var bManager: BluetoothManager
-    private lateinit var bAdapter: BluetoothAdapter
+    private var bAdapter: BluetoothAdapter? = null
 
     private var disposable: Disposable? = null
 
@@ -60,7 +60,7 @@ class ScanViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     fun startScan() {
-        bAdapter.bluetoothLeScanner?.let { bluetoothLeScanner ->
+        bAdapter?.bluetoothLeScanner?.let { bluetoothLeScanner ->
             log("Scanner startScan")
             cleanList()
             bluetoothLeScanner.startScan(leScanCallback)
@@ -76,7 +76,7 @@ class ScanViewModel(application: Application) : AndroidViewModel(application) {
 
     fun stopScan() {
         _state.value = ScanScreenState.Result(deviceList.toList())
-        bAdapter.bluetoothLeScanner?.stopScan(leScanCallback)
+        bAdapter?.bluetoothLeScanner?.stopScan(leScanCallback)
         disposable?.dispose()
     }
 
