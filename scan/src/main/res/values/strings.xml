@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">DarknessBot</string>
+    <string name="connection_state">Connection state</string>
+    <string name="Connect">Подключить</string>
+    <string name="count_of_connections_example">28 подключений</string>
+    <string name="unnamed">Unnamed</string>
+    <string name="tap_to_search_devices">Tap for scanning</string>
+    <string name="null_fragment_scan_binding">FragmentScanBinding = null</string>
+    <string name="empty">Empty</string>
+    <string name="scanning">Scanning…</string>
+    <string name="tap_for_scanning">Tap for scanning</string>
+    <string name="start_scan_button">start scan button</string>
+    <string name="demo">Demo</string>
+    <string name="settings">Settings</string>
+
+</resources>

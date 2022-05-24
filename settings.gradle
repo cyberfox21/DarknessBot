@@ -7,4 +7,31 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "DarknessBotAndroid"
+
+// using script instead of
 include ':app'
+include ':core'
+include ':dashboard'
+include ':scan'
+include ':settings'
+include ':navigation'
+
+////
+//includeRecursive(new File(rootProject))
+//includeRecursive(file('core'))
+//includeRecursive(file('app'))
+//
+
+void includeRecursive(File file) {
+    if (isModule(file)) {
+        String moduleName = ":$file.name"
+        include(moduleName)
+        project(moduleName).projectDir = file
+    } else {
+        file.eachDir { includeRecursive(it) }
+    }
+}
+
+static boolean isModule(File file) {
+    return new File(file, 'build.gradle').isFile()
+}

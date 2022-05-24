@@ -1,0 +1,41 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.DarknessBotAndroid" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorDarkSkyBlue</item>
+        <item name="colorPrimaryDark">@color/colorDarkSkyBlue</item>
+        <item name="android:windowBackground">@color/colorDarkSkyBlue</item>
+        <item name="colorAccent">@color/colorCerulean</item>
+
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/colorDarkSkyBlue</item>
+        <item name="colorSecondaryVariant">@color/colorDarkSkyBlue</item>
+        <item name="colorOnSecondary">@color/colorBlack</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/colorDarkSkyBlue</item>
+        <item name="android:navigationBarColor" tools:targetApi="l">@color/colorDarkSkyBlue</item>
+        <item name="colorControlHighlight">@color/colorWhite</item>
+
+        <item name="actionMenuTextColor">@color/colorWhite</item>
+        <item name="android:actionMenuTextColor">@color/colorWhite</item>
+
+    </style>
+
+    <style name="ExpandedToolbar" parent="Widget.Design.CollapsingToolbar">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="CollapsingToolbar" parent="Widget.Design.CollapsingToolbar">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ItemDevice">
+        <item name="android:background">@color/colorWhite</item>
+    </style>
+
+    <style name="ItemDashboard">
+        <item name="android:background">@color/colorWhite</item>
+    </style>
+</resources>

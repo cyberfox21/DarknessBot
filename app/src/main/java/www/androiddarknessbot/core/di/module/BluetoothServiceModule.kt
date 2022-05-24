@@ -7,9 +7,12 @@ import androidx.core.app.NotificationCompat
 import dagger.Module
 import dagger.Provides
 import www.androiddarknessbot.R
-import www.androiddarknessbot.core.di.annotation.ServiceScope
+import www.androiddarknessbot.dashboard.di.annotation.ServiceScope
 import www.androiddarknessbot.dashboard.data.BluetoothService
 
+/**
+ * @author t.shkolnik
+ */
 @Module
 class BluetoothServiceModule {
 

@@ -3,7 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/DarknessBotAndroid.iml" filepath="$PROJECT_DIR$/.idea/modules/DarknessBotAndroid.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/DarknessBotAndroid.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/DarknessBotAndroid.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/dashboard/DarknessBotAndroid.dashboard.iml" filepath="$PROJECT_DIR$/.idea/modules/dashboard/DarknessBotAndroid.dashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/navigation/DarknessBotAndroid.navigation.iml" filepath="$PROJECT_DIR$/.idea/modules/navigation/DarknessBotAndroid.navigation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/scan/DarknessBotAndroid.scan.iml" filepath="$PROJECT_DIR$/.idea/modules/scan/DarknessBotAndroid.scan.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/settings/DarknessBotAndroid.settings.iml" filepath="$PROJECT_DIR$/.idea/modules/settings/DarknessBotAndroid.settings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/StudioProjects.DarknessBotAndroid.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/StudioProjects.DarknessBotAndroid.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/StudioProjects.DarknessBotAndroid.core.iml" filepath="$PROJECT_DIR$/.idea/modules/core/StudioProjects.DarknessBotAndroid.core.iml" />
     </modules>
   </component>
 </project>

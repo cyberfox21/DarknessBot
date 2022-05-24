@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DarknessBot</string>
+    <string name="null_fragment_dashboard">FragmentDashboardBinding = null</string>
+    <string name="functional_button_with_image">functional_button_with_image</string>
+</resources>

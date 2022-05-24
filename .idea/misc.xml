@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.2962962962962963" />
         <entry key="..\:/Android/AndroidStudioProjects/DarknessBotAndroid/app/src/main/res/drawable-anydpi/ic_settings.xml" value="0.165625" />
         <entry key="..\:/Android/AndroidStudioProjects/DarknessBotAndroid/app/src/main/res/drawable-hdpi/rectangle.xml" value="0.2864583333333333" />
         <entry key="..\:/Android/AndroidStudioProjects/DarknessBotAndroid/app/src/main/res/drawable-hdpi/rectangle_button.xml" value="0.2864583333333333" />
@@ -26,10 +27,33 @@
         <entry key="..\:/Android/AndroidStudioProjects/DarknessBotAndroid/app/src/main/res/mipmap-anydpi-v26/ic_logo.xml" value="0.24427083333333333" />
         <entry key="..\:/Android/AndroidStudioProjects/DarknessBotAndroid/app/src/main/res/mipmap-anydpi-v26/ic_logo_round.xml" value="0.20364583333333333" />
         <entry key="..\:/Android/SDKAndroid/platforms/android-31/data/res/drawable/resolver_turn_on_work_button_ripple_background.xml" value="0.15625" />
+        <entry key="app/src/main/res/drawable-anydpi/ic_settings.xml" value="0.1415" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.29393115942028986" />
+        <entry key="app/src/main/res/layout/btn_scan_layout.xml" value="0.29393115942028986" />
+        <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.29393115942028986" />
+        <entry key="app/src/main/res/layout/fragment_scan.xml" value="0.29393115942028986" />
+        <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.29393115942028986" />
+        <entry key="app/src/main/res/layout/fragment_settings2.xml" value="0.29393115942028986" />
+        <entry key="app/src/main/res/layout/layout_empty.xml" value="0.29393115942028986" />
+        <entry key="app/src/main/res/layout/toolbar.xml" value="0.29393115942028986" />
+        <entry key="core/src/main/res/layout/activity_main.xml" value="0.3098958333333333" />
+        <entry key="dashboard/src/main/res/layout/fragment_dashboard.xml" value="0.19895833333333332" />
+        <entry key="dashboard/src/main/res/layout/item_dashboard_image.xml" value="0.11119554204660588" />
+        <entry key="dashboard/src/main/res/layout/item_dashboard_text.xml" value="0.29393115942028986" />
+        <entry key="scan/src/main/res/drawable/button_states.xml" value="0.1625" />
+        <entry key="scan/src/main/res/drawable/ic_bluetooth.xml" value="0.1625" />
+        <entry key="scan/src/main/res/drawable/ic_settings.xml" value="0.1415" />
+        <entry key="scan/src/main/res/layout/btn_scan_layout.xml" value="0.31657608695652173" />
+        <entry key="scan/src/main/res/layout/fragment_scan.xml" value="0.31657608695652173" />
+        <entry key="scan/src/main/res/layout/item_device.xml" value="0.29393115942028986" />
+        <entry key="scan/src/main/res/layout/layout_empty.xml" value="0.31657608695652173" />
+        <entry key="scan/src/main/res/menu/scan_toolbar_menu.xml" value="0.3098958333333333" />
+        <entry key="settings/src/main/res/layout/fragment_settings.xml" value="0.29393115942028986" />
+        <entry key="sources/dashboard/src/main/res/layout/item_dashboard_progress.xml" value="0.2907608695652174" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

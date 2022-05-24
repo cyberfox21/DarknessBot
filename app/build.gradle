@@ -33,37 +33,19 @@ android {
     }
 }
 
-ext {
-    rxJavaVersion = '2.2.21'
-    rxAndroidVersion = '2.1.1'
-    rxKotlinVersion = '2.4.0'
-}
-
 dependencies {
 
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    def lifecycle_version = "2.5.0-alpha03"
-
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.0'
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
+
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
-    implementation "androidx.lifecycle:lifecycle-service:$lifecycle_version"
-
     implementation 'com.skyfishjy.ripplebackground:library:1.0.1'
-
-    //Lottie files
-    implementation "com.airbnb.android:lottie:3.4.4"
-
-    //RxJava
-    implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
-    implementation "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"
-    implementation "io.reactivex.rxjava2:rxkotlin:$rxKotlinVersion"
 
     // Activity Result Api
     implementation 'androidx.activity:activity-ktx:1.4.0'
@@ -76,4 +58,10 @@ dependencies {
     //Dagger2
     implementation 'com.google.dagger:dagger:2.40.2'
     kapt 'com.google.dagger:dagger-compiler:2.40.2'
+
+    implementation project(':core')
+    implementation project(':dashboard')
+    implementation project(':scan')
+    implementation project(':settings')
+    implementation project(':navigation')
 }

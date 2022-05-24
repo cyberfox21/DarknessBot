@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ArcProgressbar">
+        <attr name="ar_progress" format="integer" />
+        <attr name="ar_max" format="integer" />
+        <attr name="ar_start_angle" format="float" />
+        <attr name="ar_width" format="dimension" />
+        <attr name="ar_arc_angle" format="float" />
+        <attr name="ar_arc_color_finished" format="color" />
+        <attr name="ar_arc_color_gradient" format="boolean" />
+        <attr name="ar_arc_color_unfinished" format="color" />
+    </declare-styleable>
+</resources>

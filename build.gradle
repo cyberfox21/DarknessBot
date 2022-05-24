@@ -16,3 +16,32 @@ buildscript {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+//ext {
+//    applicationId "www.androiddarknessbot"
+//    minSdk 24
+//    targetSdk 31
+//    compileSdk = 31
+//    versionCode 1
+//    versionName "1.0"
+//}
+
+//allprojects {
+//    ext {
+//        AppModule = {
+//            apply from: rootProject.file('build.gradle')
+//        }
+//
+//        ScanModule = {
+//            apply from: rootProject.file('build.gradle')
+//        }
+//
+//        DashboardModule = {
+//            apply from: rootProject.file('build.gradle')
+//        }
+//
+//        SettingsModule = {
+//            apply from: rootProject.file('settings/build.gradle')
+//        }
+//    }
+//}
